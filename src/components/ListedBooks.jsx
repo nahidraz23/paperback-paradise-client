@@ -1,4 +1,4 @@
-const Nvabar = () => {
+const ListedBooks = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const Nvabar = () => {
     );
 };
 
-export default Nvabar;
+export default ListedBooks;
