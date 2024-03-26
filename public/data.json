@@ -60,7 +60,7 @@
         "totalPages": 224,
         "rating": 4.4,
         "category": "Fiction",
-        "tags": ["Coming of Age", "American Literature", "Bildungsroman"],
+        "tags": ["Coming of Age", "Literature", "Bildungsroman"],
         "publisher": "Little, Brown and Company",
         "yearOfPublishing": 1951
     },
@@ -79,7 +79,7 @@
     },
     {
         "bookId": 7,
-        "bookName": "Harry Potter and the Philosopher's Stone",
+        "bookName": "Harry Potter",
         "author": "J.K. Rowling",
         "image": "https://i.ibb.co/5Mwh01P/harry-potter-and-the-philosophers-stone.jpg",
         "review": "The magical beginning of the beloved Harry Potter series. Rowling's world-building prowess shines as she introduces readers to Hogwarts School of Witchcraft and Wizardry. Through Harry's journey from the mundane to the magical, Rowling instills themes of friendship, bravery, and the triumph of good over evil, captivating readers of all ages. Harry Potter and the Philosopher's Stone is more than just a fantasy novel; it's an invitation to a world of wonder, where imagination knows no bounds and the power of love conquers all.",
