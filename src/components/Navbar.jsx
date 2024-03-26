@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import '../styles/Navbar.css'
+import '../styles/Navbar.css';
 
 const Navbar = () => {
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     </div>
 
     return (
-        <div className="navbar bg-base-100 py-12">
+        <div className="navbar bg-base-100 my-4 lg:py-12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,8 +38,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center gap-2">
-                    <img src="../../public/logo.jpg" alt="" className="w-10 h-10 rounded-2xl" />
-                    <a className="text-3xl font-work-sans font-bold">Paperback Paradise</a>
+                    <img src="https://i.ibb.co/mGwS3xm/logo.jpg" alt="" className="w-10 h-10 rounded-2xl" />
+                    <a className="lg:text-3xl font-work-sans font-bold">Paperback Paradise</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
