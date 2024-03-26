@@ -1,18 +1,21 @@
+import { Link } from "react-router-dom";
+
 const Book = ({ book }) => {
 
     const {bookId, image, tags, bookName, author, category, rating } = book;
 
     return (
-        <div className="card bg-base-100 border-2 p-6">
+        <Link to={`/book/${bookId}`}>
+            <div className="card bg-base-100 border-2 p-6">
             <div className="p-5 flex justify-center bg-[#f3f3f3] rounded-2xl">
                 <img src={image} alt="Shoes" className="rounded-xl h-[230px]" />
             </div>
             <div className="card-body">
-                <div>
+                <div className="flex gap-3 ">
                     {
                         tags.map(tag => 
                             <div key={bookId} className="flex flex-row">
-                                <h1>{tag}</h1>
+                                <h1 className="font-work-sans font-medium text-[#23BE0A] bg-green-100 p-2 bg-opacity-40 rounded-full">{tag}</h1>
                             </div>
                         )
                     }
@@ -33,6 +36,7 @@ const Book = ({ book }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
