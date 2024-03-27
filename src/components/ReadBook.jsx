@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 
 const ReadBook = ({ book }) => {
-    const { bookId, image, tags, bookName, author, category, rating, review, totalPages, publisher, yearOfPublishing } = book;
+
+    const { bookId, image, tags, bookName, author, category, rating, totalPages, publisher, yearOfPublishing } = book;
+
     return (
         <div className="mt-8 border-2 p-6 rounded-2xl flex gap-10">
             <div className="bg-[#1313130d] p-8 rounded-2xl">

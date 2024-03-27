@@ -21,7 +21,7 @@ const PagesToRead = () => {
     }, [])    
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-[#1313131a] p-10 rounded-3xl">
             <CustomShapeBarChart markReadBook={markReadBook}></CustomShapeBarChart>
         </div>
     );

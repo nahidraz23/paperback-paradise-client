@@ -1,7 +1,7 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveBookInfo } from "../utilities/localStorage";
+import { getBookInfo, getWishListInfo, saveBookInfo, saveWishList } from "../utilities/localStorage";
 
 const BookDetails = () => {
 
@@ -10,23 +10,80 @@ const BookDetails = () => {
     const book = books.find(book => book.bookId === parseInt(id));
 
     const { bookId, image, tags, bookName, author, category, rating, review, totalPages, publisher, yearOfPublishing } = book;
-    
+
+    const getWishList = getWishListInfo();
+    const getReadBook = getBookInfo();
+
+    console.log(getWishList, getReadBook);
+
     const handleRead = () => {
 
-        saveBookInfo(bookId);
+        const exist = getReadBook.find(book => book === bookId);
 
-        toast(`"${bookName}" book marked as read`,
-        {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
+        if (!exist) {
+            saveBookInfo(bookId);
+
+            toast.success(`"${bookName}" book marked as read`,
+                {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                }
+            )
         }
-    )
+        else {
+            toast.error(`You already marked "${bookName}" book as read`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }
+    };
+
+    const handleWishList = () => {
+
+        const exist = getReadBook.find(book => book === bookId);
+
+        if (!exist) {
+            saveWishList(bookId);
+
+            toast(`"${bookName}" book added to wishtlist`,
+                {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                }
+            )
+        }
+        else {
+            toast.error(`You already read "${bookName}" book`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }
     };
 
     return (
@@ -93,7 +150,7 @@ const BookDetails = () => {
                 </div>
                 <div className="flex gap-4 mt-8">
                     <Link><button onClick={() => handleRead()} className="btn bg-white border-1 font-work-sans text-lg font-semibold">Read</button></Link>
-                    <Link><button className="btn bg-[#50b1c9] text-white font-work-sans text-lg font-semibold">Wishlist</button></Link>
+                    <Link><button onClick={() => handleWishList()} className="btn bg-[#50b1c9] text-white font-work-sans text-lg font-semibold">Wishlist</button></Link>
                 </div>
             </div>
             <ToastContainer />

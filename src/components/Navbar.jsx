@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center gap-2">
                     <img src="https://i.ibb.co/mGwS3xm/logo.jpg" alt="" className="w-10 h-10 rounded-2xl" />
-                    <a className="lg:text-3xl font-work-sans font-bold">Paperback Paradise</a>
+                    <Link to={`/`} className="lg:text-3xl font-work-sans font-bold">Paperback Paradise</Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

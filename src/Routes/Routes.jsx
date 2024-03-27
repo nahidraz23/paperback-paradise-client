@@ -6,7 +6,7 @@ import ListedBooks from '../components/ListedBooks.jsx';
 import PagesToRead from '../components/PagesToRead.jsx';
 import BookDetails from '../components/BookDetails.jsx';
 import ReadBooks from "../components/ReadBooks.jsx";
-import WishList from "../components/WishList.jsx";
+import WishLists from "../components/WishLists.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'wishlist',
-                element: <WishList></WishList>
+                element: <WishLists></WishLists>
             }
           ]
         },

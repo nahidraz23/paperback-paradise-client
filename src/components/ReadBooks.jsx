@@ -3,7 +3,7 @@ import ReadBook from "./ReadBook";
 
 const ReadBooks = () => {
 
-    const[markReadBook] = useOutletContext();
+    const[markReadBook, markWishList] = useOutletContext();
     
     return (
         <div>
