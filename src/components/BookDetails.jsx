@@ -118,7 +118,7 @@ const BookDetails = () => {
                         }
                     </div>
                 </div>
-                <hr className="my-5" />
+                <hr className="my-5" /> 
                 <div>
                     <div className="overflow-x">
                         <table className="table border-separate">

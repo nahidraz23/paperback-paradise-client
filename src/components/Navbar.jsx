@@ -24,6 +24,21 @@ const Navbar = () => {
                 Pages to Read
             </NavLink>
         </li>
+        <li className="font-work-sans text-lg">
+            <NavLink to={'/request-book'} style={({ isActive }) => {
+                return isActive ? { backgroundColor: "white", color: "#23BE0A", fontWeight: "600" } : {};
+            }}>
+                Request Book
+            </NavLink>
+        </li>
+        <li className="font-work-sans text-lg">
+            <NavLink to={'/contact'} style={({ isActive }) => {
+                return isActive ? { backgroundColor: "white", color: "#23BE0A", fontWeight: "600" } : {};
+            }}>
+                Contact
+            </NavLink>
+        </li>
+        
     </div>
 
     return (

@@ -3,10 +3,10 @@ import ReadBook from "./ReadBook";
 
 const ReadBooks = () => {
 
-    const[markReadBook, markWishList] = useOutletContext();
+    const[markReadBook] = useOutletContext();
     
     return (
-        <div>
+        <div className="">
             {
                 markReadBook.map(book => <ReadBook key={book.bookId} book={book}></ReadBook>)
             }

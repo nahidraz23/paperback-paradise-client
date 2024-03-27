@@ -7,6 +7,8 @@ import PagesToRead from '../components/PagesToRead.jsx';
 import BookDetails from '../components/BookDetails.jsx';
 import ReadBooks from "../components/ReadBooks.jsx";
 import WishLists from "../components/WishLists.jsx";
+import Contact from "../components/Contact.jsx";
+import RequestBook from "../components/RequestBook.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +44,14 @@ export const router = createBrowserRouter([
           path: '/book/:id',
           element: <BookDetails></BookDetails>,
           loader: () => fetch('https://nahidraz23.github.io/bookData/data.json')
+        },
+        {
+          path: '/contact',
+          element: <Contact></Contact>
+        },
+        {
+          path: '/request-book',
+          element: <RequestBook></RequestBook>
         }
       ]
     },

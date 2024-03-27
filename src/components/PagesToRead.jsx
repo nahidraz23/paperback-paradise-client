@@ -12,17 +12,19 @@ const PagesToRead = () => {
     useEffect(() => {
         const storedBookId = getBookInfo();
 
-        if(books.length > 0){
+        if (books.length > 0) {
 
             const readBook = books.filter(book => storedBookId.includes(book.bookId));
 
             setMarkReadBook(readBook);
         }
-    }, [])    
+    }, [])
 
     return (
-        <div className="flex justify-center bg-[#1313131a] p-10 rounded-3xl">
-            <CustomShapeBarChart markReadBook={markReadBook}></CustomShapeBarChart>
+        <div className="p-4 lg:p-0">
+            <div className="flex justify-center bg-[#1313131a]  rounded-3xl">
+                <CustomShapeBarChart markReadBook={markReadBook}></CustomShapeBarChart>
+            </div>
         </div>
     );
 };

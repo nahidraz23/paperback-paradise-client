@@ -5,7 +5,7 @@ const ReadBook = ({ book }) => {
     const { bookId, image, tags, bookName, author, category, rating, totalPages, publisher, yearOfPublishing } = book;
 
     return (
-        <div className="mt-8 border-2 p-6 rounded-2xl flex gap-10">
+        <div className="mt-8 border-2 p-6 rounded-2xl flex flex-col lg:flex-row gap-10">
             <div className="bg-[#1313130d] p-8 rounded-2xl">
                 <img src={image} alt="" className="w-[230px] h-[250px]" />
             </div>
@@ -14,7 +14,7 @@ const ReadBook = ({ book }) => {
                     <h1 className="font-playfair font-bold text-2xl">{bookName}</h1>
                     <h2 className="font-work-sans font-medium">By: {author}</h2>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="flex flex-col lg:flex-row items-center gap-6">
                     <div className="">
                         <h1 className="font-work-sans font-bold">Tag :</h1>
                     </div>
@@ -53,10 +53,10 @@ const ReadBook = ({ book }) => {
                 <hr className="my-5" />
                 <div className="flex items-center gap-3 font-work-sans">
                     <div className="bg-[#328eff26] p-3 rounded-full">
-                        <h1 className="text-[#328eff]">Category: {category}</h1>
+                        <h1 className="text-[#328eff] text-center">Category: {category}</h1>
                     </div>
                     <div className="bg-[#ffac3326] p-3 rounded-full">
-                        <h1 className="text-[#ffac33]">Rating: {rating}</h1>
+                        <h1 className="text-[#ffac33] text-center">Rating: {rating}</h1>
                     </div>
                     <Link to={`/book/${bookId}`}><button className="btn rounded-full bg-[#23be0a] text-white font-medium">View Details</button></Link>
                 </div>

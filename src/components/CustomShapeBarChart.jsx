@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -15,10 +15,11 @@ const TriangleBar = (props) => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
-const CustomShapeBarChart = ({markReadBook}) => {
+const CustomShapeBarChart = ({ markReadBook }) => {
 
     return (
-        <div>
+
+        <ResponsiveContainer width="95%" height={500}>
             <BarChart
                 width={1400}
                 height={600}
@@ -33,13 +34,16 @@ const CustomShapeBarChart = ({markReadBook}) => {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="bookName" />
                 <YAxis />
+                <Tooltip></Tooltip>
+                <Legend></Legend>
                 <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
                     {markReadBook.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                     ))}
                 </Bar>
             </BarChart>
-        </div>
+        </ResponsiveContainer>
+
     );
 };
 
