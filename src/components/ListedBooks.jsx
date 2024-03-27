@@ -16,13 +16,6 @@ const ListedBooks = () => {
 
             const readBook = books.filter(book => storedBookId.includes(book.bookId));
 
-            // const readBook = [];
-            // for(const id of storedBookId){
-            //     const book = books.find(book => book.bookId === id);
-            //     if(book){
-            //         readBook.push(book);
-            //     }
-            // }
             setMarkReadBook(readBook);
         }
     }, [])

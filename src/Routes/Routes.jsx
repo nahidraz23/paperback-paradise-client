@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
         {
           path: '/listed-books',
           element: <ListedBooks></ListedBooks>,
-          loader: () => fetch('../public/data.json'),
+          loader: () => fetch('https://nahidraz23.github.io/bookData/data.json'),
           children: [
             {
                 index: true,
@@ -35,12 +35,13 @@ export const router = createBrowserRouter([
         },
         {
           path: '/pages-to-read',
-          element: <PagesToRead></PagesToRead>
+          element: <PagesToRead></PagesToRead>,
+          loader: () => fetch('https://nahidraz23.github.io/bookData/data.json')
         },
         {
           path: '/book/:id',
           element: <BookDetails></BookDetails>,
-          loader: () => fetch('../public/data.json')
+          loader: () => fetch('https://nahidraz23.github.io/bookData/data.json')
         }
       ]
     },
