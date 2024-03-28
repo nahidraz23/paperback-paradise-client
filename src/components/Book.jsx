@@ -6,9 +6,9 @@ const Book = ({ book }) => {
 
     return (
         <Link to={`/book/${bookId}`}>
-            <div className="card bg-base-100 border-2 border-[#FCF5F8] p-6 gap-6 hover:border-purple-600">
+            <div className="card bg-base-100 border-2 border-[#FCF5F8] p-6 gap-6 hover:border-purple-600 hover:scale-105">
                 <div className="p-5 flex justify-center bg-[#FCF5F8] rounded-2xl">
-                    <img src={image} alt="Shoes" className="rounded-xl h-[230px]" />
+                    <img src={image} alt="Shoes" className="rounded-xl h-[230px] " />
                 </div>
                 <div className="lg:space-y-3">
                     <div className="flex gap-3 ">
