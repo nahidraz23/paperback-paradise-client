@@ -1,5 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast, Bounce } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 import { getBookInfo, getWishListInfo, saveBookInfo, saveWishList } from "../utilities/localStorage";
 
@@ -25,28 +25,13 @@ const BookDetails = () => {
 
             toast.success(`"${bookName}" book marked as read`,
                 {
-                    position: "top-right",
                     autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
                 }
             )
         }
         else {
             toast.error(`You already marked "${bookName}" book as read`, {
-                position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
             });
         }
     };
@@ -58,30 +43,15 @@ const BookDetails = () => {
         if (!exist) {
             saveWishList(bookId);
 
-            toast(`"${bookName}" book added to wishtlist`,
+            toast.success(`"${bookName}" book added to wishtlist`,
                 {
-                    position: "top-right",
                     autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
                 }
             )
         }
         else {
             toast.error(`You already read "${bookName}" book`, {
-                position: "top-right",
                 autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
             });
         }
     };
@@ -93,12 +63,12 @@ const BookDetails = () => {
             </div>
             <div className="flex flex-col">
                 <div className="space-y-5">
-                    <h1 className="font-playfair font-bold text-4xl">{bookName}</h1>
-                    <h2 className="font-work-sans text-xl font-medium text-[#131313cc]">By : {author}</h2>
+                    <h1 className="font-playfair font-bold text-4xl text-[#6C106C]">{bookName}</h1>
+                    <h2 className="font-work-sans text-xl font-medium text-[#ffac33]">By : {author}</h2>
                 </div>
                 <hr className="my-5" />
                 <div>
-                    <h1 className="text-xl font-work-sans font-medium text-[#131313cc]">{category}</h1>
+                    <h1 className="text-xl font-work-sans font-medium text-[#328eff]">{category}</h1>
                 </div>
                 <hr className="my-5" />
                 <div>
@@ -112,13 +82,13 @@ const BookDetails = () => {
                         {
                             tags.map(tag =>
                                 <div key={bookId} className="flex flex-row">
-                                    <h1 className="font-work-sans font-medium text-[#23BE0A] bg-green-100 p-2 bg-opacity-40 rounded-full">#{tag}</h1>
+                                    <h1 className="font-work-sans font-medium text-[#9333ea] bg-[#FFF0FF] p-2 bg-opacity-40 rounded-full">{tag}</h1>
                                 </div>
                             )
                         }
                     </div>
                 </div>
-                <hr className="my-5" /> 
+                <hr className="my-5" />
                 <div>
                     <div className="overflow-x">
                         <table className="table border-separate">
@@ -149,11 +119,20 @@ const BookDetails = () => {
                     </div>
                 </div>
                 <div className="flex gap-4 mt-8">
-                    <Link><button onClick={() => handleRead()} className="btn bg-white border-1 font-work-sans text-lg font-semibold">Read</button></Link>
-                    <Link><button onClick={() => handleWishList()} className="btn bg-[#50b1c9] text-white font-work-sans text-lg font-semibold">Wishlist</button></Link>
+                    <Link onClick={() => handleRead()} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-purple-600 inline-block">
+                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90"></span>
+                        <span className="relative group-hover:text-white hover:font-semibold text-lg font-semibold">Read</span>
+                    </Link>
+                    <Link onClick={() => handleWishList()} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-[#50b1c94d] text-[#50b1c9] inline-block">
+                        <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#50b1c9] group-hover:h-full opacity-90"></span>
+                        <span className="relative group-hover:text-white hover:font-semibold text-lg font-semibold">Wishlist</span>
+                    </Link>
                 </div>
             </div>
-            <ToastContainer />
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
         </div>
     );
 };

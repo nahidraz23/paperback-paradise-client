@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-const Book = ({ book }) => {
+const BengaliBook = ({ book }) => {
 
     const { bookId, image, tags, bookName, author, category, rating } = book;
-
     return (
-        <Link to={`/book/${bookId}`}>
+        <Link to={`/bengali-book/${bookId}`}>
             <div className="card bg-base-100 border-2 border-[#FCF5F8] p-6 gap-6 hover:border-purple-600">
                 <div className="p-5 flex justify-center bg-[#FCF5F8] rounded-2xl">
                     <img src={image} alt="Shoes" className="rounded-xl h-[230px]" />
@@ -40,4 +39,4 @@ const Book = ({ book }) => {
     );
 };
 
-export default Book;
+export default BengaliBook;

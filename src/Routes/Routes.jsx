@@ -8,7 +8,9 @@ import BookDetails from '../components/BookDetails.jsx';
 import ReadBooks from "../components/ReadBooks.jsx";
 import WishLists from "../components/WishLists.jsx";
 import Contact from "../components/Contact.jsx";
-import RequestBook from "../components/RequestBook.jsx";
+import BengaliBooks from "../components/BengaliBooks.jsx";
+import SignIn from "../components/SignIn.jsx";
+import SignUp from "../components/SignUp.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -46,12 +48,26 @@ export const router = createBrowserRouter([
           loader: () => fetch('https://nahidraz23.github.io/bookData/data.json')
         },
         {
+          path: '/bengali-book/:id',
+          element: <BookDetails></BookDetails>,
+          loader: () => fetch('https://nahidraz23.github.io/bookData/bengaliBook.json')
+        },
+        {
           path: '/contact',
           element: <Contact></Contact>
         },
         {
-          path: '/request-book',
-          element: <RequestBook></RequestBook>
+          path: '/bengali-book',
+          element: <BengaliBooks></BengaliBooks>,
+          loader: () => fetch('https://nahidraz23.github.io/bookData/bengaliBook.json')
+        },
+        {
+          path: '/sign-in',
+          element: <SignIn></SignIn>
+        },
+        {
+          path: '/sign-up',
+          element: <SignUp></SignUp>
         }
       ]
     },

@@ -1,18 +1,10 @@
-import { ToastContainer, toast, Bounce } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
 
     const notify = () => toast.success("Your Request send Successfully", {
-        position: "top-right",
         autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
     });
 
     return (
@@ -44,7 +36,10 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer />
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
         </div>
     );
 };
