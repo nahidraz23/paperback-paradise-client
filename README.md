@@ -1,6 +1,7 @@
 # Paperback Paradise
 
-<a href="https://paperback-paradise.surge.sh/" target="_blank">Live link</a>
+- Live Site: 
+  - <a href="https://paperback-paradise.surge.sh/" target="_blank">Live link</a>
 
 # Features
 - **Diverse Book Collection:**

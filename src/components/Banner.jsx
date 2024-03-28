@@ -27,7 +27,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <img src="https://i.ibb.co/Z2LmyjS/thealchemsit.png" alt="" className="w-1/2 lg:w-auto" />
+                       <img src="https://i.ibb.co/Z2LmyjS/thealchemsit.png" alt="" className="w-1/2 lg:w-auto" />
                     </div>
                 </div>
             </div>
