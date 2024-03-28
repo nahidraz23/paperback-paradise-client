@@ -1,7 +1,7 @@
 # Paperback Paradise
 
 - Live Site: 
-  - <a href="https://paperback-paradise.surge.sh/" target="_blank">Live link</a>
+  - <a href="https://paperback-paradise.surge.sh/">Live link</a>
 
 # Features
 - **Diverse Book Collection:**
@@ -22,3 +22,14 @@
 - **User Ratings and Reviews:**
   - The presence of user ratings and reviews enables users to gauge the quality and popularity of books based on feedback from other readers.
   - User-generated ratings and reviews provide social proof and influence purchase decisions, fostering trust and credibility within the bookshop community.
+
+  # Resources 
+
+- <a href="https://reactrouter.com/en/main">React Router Dom</a>
+- <a href="https://tailwindcss.com/">Tailwind CSS</a>
+- <a href="https://devdojo.com/tailwindcss/buttons">Tailwind CSS Buttons</a>
+- <a href="https://daisyui.com/">Daisy UI</a>
+- <a href="https://mambaui.com/">Mamba UI</a>
+- <a href="https://react-hot-toast.com/">React Hot Toast</a>
+- <a href="https://fkhadra.github.io/react-toastify/introduction/">React Toastify</a>
+- <a href="https://www.andrealves.dev/blog/how-to-make-an-animated-gradient-text-with-tailwindcss/">Animated Gradient Text</a>
