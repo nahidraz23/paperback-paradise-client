@@ -6,7 +6,7 @@ const BengaliBooks = () => {
     const bengaliBooks = useLoaderData();
 
     return (
-        <div className="lg:mt-24 p-4 lg:p-0">
+        <div className="p-4 lg:p-0">
             <div className="mb-10">
                 <h1 className="text-4xl font-playfair font-bold text-center text-purple-600">Books</h1>
             </div>
