@@ -8,7 +8,7 @@ const BengaliBooks = () => {
     return (
         <div className="p-4 lg:p-0">
             <div className="mb-10">
-                <h1 className="text-4xl font-playfair font-bold text-center text-purple-600">Books</h1>
+                <h1 className="text-4xl font-playfair font-bold text-center text-purple-600"><span className="border-b-2 border-purple-600">Books</span></h1>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {

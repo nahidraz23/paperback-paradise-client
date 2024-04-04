@@ -49,8 +49,14 @@ const ListedBooks = () => {
         markWishList.sort((a1, a2) => (a1.yearOfPublishing < a2.yearOfPublishing) ? 1 : (a1.yearOfPublishing > a2.yearOfPublishing) ? -1 : 0);
     }
 
+    const handleSortByRating = () => {
+        markReadBook.sort((b1, b2) => (b1.rating < b2.rating) ? 1 : (b1.rating > b2.rating) ? -1 : 0);
+
+        markWishList.sort((a1, a2) => (a1.rating < a2.rating) ? 1 : (a1.rating > a2.rating) ? -1 : 0);
+    }
+
     return (
-        <div className="p-4 lg:p-0">
+        <div className="p-4 lg:p-0 min-h-[calc(100vh-180px)]">
             <div className="bg-[#FCF5F8] p-8 rounded-2xl text-center font-work-sans font-bold text-3xl">
                 <h1 className="text-purple-600">Books</h1>
             </div>
@@ -67,6 +73,7 @@ const ListedBooks = () => {
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li className="font-medium text-purple-600"><Link onClick={() => {handleSortReadBookByPageCount(); () => handleSortWishListByPageCount()}}>Total Pages</Link></li>
                         <li className="font-medium text-purple-600"><Link onClick={handleSortByPublishYear}>Published Year</Link></li>
+                        <li className="font-medium text-purple-600"><Link onClick={handleSortByRating}>Rating</Link></li>
                     </ul>
                 </div>
             </div>
