@@ -67,6 +67,12 @@ yarn dev
 
 Replace "your-username" and "your-repo-name" with your actual GitHub username and repository name. This section includes detailed steps for installing dependencies and running the project.
 
+## Build using
+- **JavaScript** 
+- **React**
+- **Tailwind**
+- **DaisyUI**
+
 # Features
 - **Diverse Book Collection:**
   - The website offers a diverse collection of books spanning various genres, authors, and themes, catering to different interests and preferences of readers.
