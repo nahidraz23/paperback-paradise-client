@@ -3,6 +3,70 @@
 - Live Site: 
   - <a href="https://paperback-paradise.surge.sh/">Live link</a>
 
+  ## Installation
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14 or above)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Clone the Repository
+
+
+## Installation
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14 or above)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### Install Dependencies
+
+Using npm:
+
+```bash
+npm install
+```
+
+Or using yarn:
+
+```bash
+yarn
+```
+
+## Running the Project
+
+To start the development server, run the following:
+
+Using npm:
+
+```bash
+npm run dev
+```
+
+Or using yarn:
+
+```bash
+yarn dev
+```
+
+Replace "your-username" and "your-repo-name" with your actual GitHub username and repository name. This section includes detailed steps for installing dependencies and running the project.
+
 # Features
 - **Diverse Book Collection:**
   - The website offers a diverse collection of books spanning various genres, authors, and themes, catering to different interests and preferences of readers.
